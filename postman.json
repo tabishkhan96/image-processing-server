@@ -1,0 +1,800 @@
+{
+	"info": {
+		"_postman_id": "cd568aee-4273-41aa-836c-9c6eb3bb73ec",
+		"name": "imagetools",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "about",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/about",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"about"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "resize",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/aquar/Desktop/art_2.png"
+						},
+						{
+							"key": "width",
+							"value": "200",
+							"type": "text"
+						},
+						{
+							"key": "height",
+							"value": "200",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/resize",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"resize"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rotate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/aquar/Desktop/art_2.png"
+						},
+						{
+							"key": "angle",
+							"value": "270",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/rotate",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"rotate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "grayscale",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/aquar/Desktop/art_2.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/grayscale",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"grayscale"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "compress",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/aquar/Desktop/women.jpg"
+						},
+						{
+							"key": "quality",
+							"value": "40",
+							"type": "text"
+						},
+						{
+							"key": "compress_method",
+							"value": "quantize",
+							"type": "text"
+						},
+						{
+							"key": "compress_level",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/compress",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"compress"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "thumbnail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/aquar/Desktop/art_2.png"
+						},
+						{
+							"key": "width",
+							"value": "200",
+							"type": "text"
+						},
+						{
+							"key": "height",
+							"value": "200",
+							"type": "text"
+						},
+						{
+							"key": "round",
+							"value": "True",
+							"type": "text"
+						},
+						{
+							"key": "r_radius",
+							"value": "15",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/thumbnail",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"thumbnail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getColorPalette",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/aquar/Desktop/art_3.png"
+						},
+						{
+							"key": "max_colors",
+							"value": "7",
+							"type": "text"
+						},
+						{
+							"key": "display_hex_values",
+							"value": "False",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/getColorPalette",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"getColorPalette"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crop",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/aquar/Desktop/art_2.png"
+						},
+						{
+							"key": "x1",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "y1",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "x2",
+							"value": "200",
+							"type": "text"
+						},
+						{
+							"key": "y2",
+							"value": "200",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/crop",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"crop"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "scale",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/aquar/Desktop/art_2.png"
+						},
+						{
+							"key": "width",
+							"value": "150",
+							"type": "text"
+						},
+						{
+							"key": "height",
+							"value": "100",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/scale",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"scale"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "filter",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/aquar/Desktop/art_2.png"
+						},
+						{
+							"key": "filter_name",
+							"value": "edges",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/filter",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"filter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "blur",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/aquar/Desktop/art_2.png"
+						},
+						{
+							"key": "blur_type",
+							"value": "gaussian",
+							"type": "text"
+						},
+						{
+							"key": "radius",
+							"value": "15",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/blur",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"blur"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getImageInfo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/aquar/Desktop/art_2.png"
+						},
+						{
+							"key": "extract_exif",
+							"value": "True",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/getImageInfo",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"getImageInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mirror",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/aquar/Desktop/27.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/mirror",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"mirror"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/aquar/Desktop/art_2.png"
+						},
+						{
+							"key": "width",
+							"value": "300",
+							"type": "text"
+						},
+						{
+							"key": "height",
+							"value": "200",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/fit",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"fit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "brightness",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/aquar/Desktop/7.png"
+						},
+						{
+							"key": "factor",
+							"value": "1.2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/brightness",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"brightness"
+					],
+					"query": [
+						{
+							"key": "image",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "invert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/aquar/Desktop/7.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/invert",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"invert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_border",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/aquar/Desktop/art_2.png"
+						},
+						{
+							"key": "size",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "color",
+							"value": "black",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/addBorder",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"addBorder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addNoise",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/aquar/Desktop/art_2.png"
+						},
+						{
+							"key": "variance",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/addNoise",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"addNoise"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "concat",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image_1",
+							"type": "file",
+							"src": "/C:/Users/aquar/Desktop/art_2.png"
+						},
+						{
+							"key": "image_2",
+							"type": "file",
+							"src": "/C:/Users/aquar/Desktop/art_3.png"
+						},
+						{
+							"key": "position",
+							"value": "horizontal",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/concat",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"concat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "watermark",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image_1",
+							"type": "file",
+							"src": "/C:/Users/aquar/Desktop/art_2.png"
+						},
+						{
+							"key": "watermark",
+							"type": "file",
+							"src": "/C:/Users/aquar/Desktop/watermark.png"
+						},
+						{
+							"key": "position",
+							"value": "center",
+							"type": "text"
+						},
+						{
+							"key": "repeat",
+							"value": "False",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/watermark",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"watermark"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addText",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/aquar/Desktop/background.png"
+						},
+						{
+							"key": "text",
+							"value": "Hello",
+							"type": "text"
+						},
+						{
+							"key": "size",
+							"value": "32",
+							"type": "text"
+						},
+						{
+							"key": "color",
+							"value": "magenta",
+							"type": "text"
+						},
+						{
+							"key": "position",
+							"value": "center",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/addText",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"addText"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://127.0.0.1:8080"
+		}
+	]
+}
