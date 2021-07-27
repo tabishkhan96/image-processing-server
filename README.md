@@ -4,6 +4,8 @@ HTTP microservice for working with images. It includes all the basic image proce
 
 The project was made using FastAPI and Pillow.
 
+Video demonstartion of my work: https://vimeo.com/579921101
+
 ## Installation
 
 ```shell
